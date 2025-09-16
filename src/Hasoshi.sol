@@ -31,14 +31,14 @@ contract Hasoshi is ERC721Enumerable {
       _safeMint(msg.sender, tokenId); 
     }
 
-    // function tokenURI(uint256 tokenId) public view override returns (string memory) {
-    //   _requireMinted(tokenId); 
-    //   uint256 variant = tokenVariant(tokenId); 
-    //   return string(
-    //     abi.encodePacked(
-    //       baseURI, variant.toString(), ".json"
-    //     )
-    //   ); 
-    // }
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+    _ownerOf(tokenId); // will revert if token doesn't exist
+    uint256 variant = tokenVariant[tokenId]; 
+    return string(
+        abi.encodePacked(
+            baseURI, variant.toString(), ".json"
+        )
+    );
+}
 
 }
