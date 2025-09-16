@@ -1,66 +1,44 @@
-## Foundry
+🥷 Hasoshi NFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Hasoshi is an experimental ERC-721 collection built with OpenZeppelin
+ smart contracts. It combines simplicity, transparency, and extendability, making it a great foundation for experimenting with NFT mechanics or building a full NFT project.
 
-Foundry consists of:
+✨ Features
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+ERC-721 Standard – Fully compliant, ensuring compatibility with marketplaces like OpenSea and Blur.
 
-## Documentation
+Enumerable Extension – Track and iterate over tokens owned by an address or across the whole collection.
 
-https://book.getfoundry.sh/
+Metadata & Strings – Supports token URIs with on-chain string conversion utilities.
 
-## Usage
+Ownable Access Control – Only the contract owner can perform admin operations (e.g., minting).
 
-### Build
+🚀 Tech Stack
 
-```shell
-$ forge build
-```
+Solidity ^0.8.19
 
-### Test
+OpenZeppelin Contracts
 
-```shell
-$ forge test
-```
+Forge (Foundry) for testing and deployment
 
-### Format
+📖 Usage
 
-```shell
-$ forge fmt
-```
+Mint new NFTs directly from the contract.
 
-### Gas Snapshots
+Extend functionality with custom mint logic (public sale, whitelist, etc.).
 
-```shell
-$ forge snapshot
-```
+Integrate with frontends using libraries like Wagmi or Viem.
 
-### Anvil
+🛠️ Development
+# Install dependencies
+forge install OpenZeppelin/openzeppelin-contracts
 
-```shell
-$ anvil
-```
+# Compile
+forge build
 
-### Deploy
+# Test
+forge test
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+🔮 Vision
 
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Hasoshi is designed as a playground for experimenting with NFT mechanics — from metadata handling to minting strategies. It can be adapted into a full NFT drop, integrated into a DeFi primitive, or extended with staking, royalties, and more.
